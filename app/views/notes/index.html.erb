@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Notes</h1>
+
+<div class="row header">
+  <div class="col-xs-4">Title</div>
+  <div class="col-xs-4">Body</div>
+  <div class="col-xs-4"></div>
+</div>
+
+<% @notes.each do |note| %>
+  <div class="row">
+    <div class="col-xs-4"><%= note.title %></div>
+    <div class="col-xs-4"><%= note.body %></div>
+    <div class="col-xs-1"><%= link_to 'Show', note %></div>
+    <div class="col-xs-1"><%= link_to 'Edit', edit_note_path(note) %></div>
+    <div class="col-xs-1"><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }%></div>
+  </div>
+<% end %>
+
+<%= link_to 'New Note', new_note_path, class: 'btn btn-primary col-xs-2 col-md-1' %>
