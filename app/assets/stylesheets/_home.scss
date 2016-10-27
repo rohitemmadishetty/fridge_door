@@ -1,0 +1,32 @@
+body {
+  background: image-url('kitchen.jpg');
+}
+
+.container-fluid {
+  padding-top: 1rem;
+}
+
+.card-columns {
+  @include media-breakpoint-up(xs) {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+.card {
+  &.note {
+    background-color: #ccccff;
+  }
+  &.todo {
+    background-color: #ffffcc;
+  }
+  &.todo.completed {
+    .card-title {
+      text-decoration: line-through;
+    }
+  }
+  &.weather {
+    background-color: #eeeeee;
+  }
+}

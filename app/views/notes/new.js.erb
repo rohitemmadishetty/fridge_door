@@ -1,0 +1,4 @@
+$("#new_note").remove();
+$(".dropdown.open").toggleClass("open");
+var form = '<%= escape_javascript(render 'form', note: @note, remote: true) %>';
+$('.card-columns').prepend(form);

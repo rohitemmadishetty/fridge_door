@@ -1,0 +1,13 @@
+<div class="note card card-block" data-note-id="<%= note.id %>">
+  <%= image_tag(note.image.url, class: "card-img-top") if note.image.present? %>
+  <span class="pull-xs-right">
+    <%= link_to edit_note_path(note), remote: true do %>
+      <%= fa_icon "edit", text: "Edit" %>
+    <% end %>
+    <%= link_to note, method: :delete, remote: true do %>
+      <%= fa_icon "trash", text: "Delete" %>
+    <% end %>
+  </span>
+  <h4 class="card-title"><%= note.title %></h4>
+  <p class="card-text"><%= note.body %></p>
+</div>

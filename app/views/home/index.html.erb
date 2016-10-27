@@ -1,0 +1,15 @@
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+	  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    New +
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%= link_to "New Note", new_note_path, class: "dropdown-item", remote: true %>
+    <%= link_to "New Todo", new_todo_path, class: "dropdown-item" %>
+    <%= link_to "New Weather", new_weather_path, class: "dropdown-item" %>
+  </div>
+</div>
+
+<div class="card-columns">
+  <%= render @items %>
+</div>

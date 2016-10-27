@@ -1,0 +1,7 @@
+var note = '<%= escape_javascript(render @note) %>';
+var form = $("#edit_note_<%= @note.id %>");
+
+form.fadeOut("slow", function() {
+  $(this).replaceWith(note);
+  $(note).fadeIn("slow");
+});

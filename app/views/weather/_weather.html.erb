@@ -1,0 +1,11 @@
+<div class="weather card card-block">
+  <h4 class="card-title"><%= image_tag(weather.icon_url) %> <%= weather.temperature %>&deg;F</h4>
+  <p class="card-text">
+    <%= weather.description %> in <%= weather.location %>
+  <p>
+  <p class="card-text">
+    <em><%= time_ago_in_words(weather.created_at) %> ago</em>
+  </p>
+  <%= link_to "Edit", edit_weather_path(weather), class: 'card-link' %>
+  <%= link_to "Show", weather_path(weather), class: 'card-link' %>
+</div>

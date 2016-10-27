@@ -1,0 +1,4 @@
+var oldCard = $("[data-todo-id='<%= @todo.id %>']");
+var newCard = '<%= escape_javascript(render @todo) %>';
+
+oldCard.replaceWith(newCard);

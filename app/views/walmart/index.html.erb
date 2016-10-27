@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-5">
+    <strong>Item</strong>
+  </div>
+  <div class="col-xs-3">
+    <strong>Price</strong>
+  </div>
+  <div class="col-xs-4"></div>
+</div>
+
+<% @items.each do |item| %>
+  <div class="col-xs-5">
+    <%= item[:name] %>
+  </div>
+  <div class="col-xs-3">
+    $<%= item[:price] %>
+  </div>
+  <div class="col-xs-4">
+    <%= image_tag(item[:thumbnail_url]) %>
+  </div>
+<% end %>

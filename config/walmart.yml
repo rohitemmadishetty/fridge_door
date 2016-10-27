@@ -1,0 +1,11 @@
+default: &default
+  api_key: [TODO: get one from developer.walmartlabs.com to access /trends]
+
+test:
+  <<: *default
+
+development:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,11 @@
+test:
+  debug: true
+development:
+  debug: true
+  zipcode: 72712
+  api_key: [TODO: get one from openweathermap.org and change debug to false]
+production:
+  debug: false
+  zipcode: 72712
+  api_key: [TODO: get one from openweathermap.org and change debug to false]
+#  api_key: <%= ENV['OPEN_WEATHER_MAP_API_KEY'] %>

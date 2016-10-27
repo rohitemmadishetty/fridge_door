@@ -1,0 +1,10 @@
+var card = $("[data-note-id='<%= @note.id %>']");
+if (card.length == 0) {
+  card = $("#edit_note_<%= @note.id %>"); /* form is already showing (probably has errors) */
+}
+var newCard = '<%= escape_javascript(render "form", note: @note, remote: true) %>';
+
+card.fadeOut("slow", function() {
+  $(this).replaceWith(newCard);
+  $(newCard).fadeIn("slow");
+});

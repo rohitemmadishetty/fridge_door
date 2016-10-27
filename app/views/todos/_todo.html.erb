@@ -1,0 +1,9 @@
+<div class="todo card card-block <%= todo.completed ? 'completed' : '' %>"
+     data-todo-id="<%= todo.id %>">
+  <h4 class="card-title"><%= todo.description %></h4> 
+  <%= simple_form_for todo, remote: true do |f| %>
+    <%= f.hidden_field :completed, value: !todo.completed %>
+    <% classes = todo.completed ? "btn btn-secondary" : "btn btn-success" %>
+    <%= f.submit (todo.completed ? "Mark Incomplete" : "Complete"), class: classes %>
+  <% end %>
+</div>

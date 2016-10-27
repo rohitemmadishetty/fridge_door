@@ -1,27 +1,14 @@
-<%= form_for(note) do |f| %>
-  <% if note.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+<%= simple_form_for(note, remote: remote) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% note.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :body %>
+    <%= f.input :image %>
   </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
 <% end %>

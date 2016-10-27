@@ -1,24 +1,6 @@
-# README
+# Fridge Door
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Like a kitchen sink, but better!
 
-Things you may want to cover:
+This is the completed code from the Intro to Rails Training Course at http://www.coshx.com/talks/protech-solutions/2016/04/10/introduction-to-rails
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
